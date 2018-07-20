@@ -1,0 +1,15 @@
+function nDM2_Dauxpar = Kim_spec0_approx1_prodmom2_deriv(arg) 
+sigu_11 = arg(1); 
+sigxf_11 = arg(2); 
+sigxf_21 = arg(3); 
+sigxf_22 = arg(4); 
+nDM2_Dauxpar=zeros(40,1);
+ nDM2_Dauxpar(1,1)= 1;  
+ nDM2_Dauxpar(5,1)= 4*sigu_11;  
+ nDM2_Dauxpar(8,1)= sigxf_11;  
+ nDM2_Dauxpar(9,1)= sigxf_21;  
+ nDM2_Dauxpar(10,1)= sigxf_22;  
+ nDM2_Dauxpar(18,1)= sigu_11;  
+ nDM2_Dauxpar(29,1)= sigu_11;  
+ nDM2_Dauxpar(40,1)= sigu_11;  
+nDM2_Dauxpar=reshape(nDM2_Dauxpar,[10   4]);

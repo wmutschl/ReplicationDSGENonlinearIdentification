@@ -1,0 +1,15 @@
+function nDM3_Dauxpar = Kim_spec0_approx2_prodmom3_deriv(arg) 
+sigu_11 = arg(1); 
+sigxf_11 = arg(2); 
+sigxf_21 = arg(3); 
+sigxf_22 = arg(4); 
+nDM3_Dauxpar=zeros(80,1);
+ nDM3_Dauxpar(2,1)= 4*sigu_11;  
+ nDM3_Dauxpar(11,1)= 24*sigu_11^2;  
+ nDM3_Dauxpar(14,1)= 4*sigu_11*sigxf_11;  
+ nDM3_Dauxpar(15,1)= 4*sigu_11*sigxf_21;  
+ nDM3_Dauxpar(16,1)= 4*sigu_11*sigxf_22;  
+ nDM3_Dauxpar(34,1)= 2*sigu_11^2;  
+ nDM3_Dauxpar(55,1)= 2*sigu_11^2;  
+ nDM3_Dauxpar(76,1)= 2*sigu_11^2;  
+nDM3_Dauxpar=reshape(nDM3_Dauxpar,[20   4]);

@@ -1,0 +1,13 @@
+function [nM2,ic2] = Kim_spec0_approx2_prodmom2_num_eval(arg) 
+sigu_11 = arg(1); 
+sigxf_11 = arg(2); 
+sigxf_21 = arg(3); 
+sigxf_22 = arg(4); 
+nM2=zeros(10,1);
+nM2(1,1)= sigu_11;  
+nM2(5,1)= 2*sigu_11^2;  
+nM2(8,1)= sigu_11*sigxf_11;  
+nM2(9,1)= sigu_11*sigxf_21;  
+nM2(10,1)= sigu_11*sigxf_22;  
+nM2=reshape(nM2,[10   1]);
+ic2=[1;2;3;4;5;6;7;8;9;10];
